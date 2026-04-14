@@ -80,18 +80,30 @@ body::before{
   font-weight:bold;
 }
 
-/* الأزرار (نيلي) */
+/* الأزرار */
 button{
-  padding:14px 20px;
-  margin:6px;
   border:none;
   border-radius:10px;
-  font-size:22px;
   cursor:pointer;
   background:#1e2a78;
   color:white;
+  margin:6px;
+  transition:0.2s;
 }
 
+/* زر + (أكبر) */
+button:first-of-type{
+  padding:18px 32px;
+  font-size:28px;
+}
+
+/* زر ↺ (أصغر) */
+button:last-of-type{
+  padding:10px 16px;
+  font-size:18px;
+}
+
+/* ضغط */
 button:active{
   transform:scale(0.95);
 }
