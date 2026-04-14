@@ -3,10 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>صدقة جارية</title>
 
-<!-- Social preview (عند مشاركة الرابط) -->
+<!-- 🔥 Social preview (صورة المشاركة) -->
 <meta property="og:title" content="صدقة جارية">
 <meta property="og:description" content="استغفار إلى روح المرحومة ميعاد ابراهيم">
 <meta property="og:image" content=https://raw.githubusercontent.com/shukran2000/Shukran/refs/heads/main/image.jpg
@@ -23,18 +22,24 @@
 body{
   font-family: Arial;
   background:#f2f2f2;
-  min-height:100vh;
+  height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
 }
 
+/* الكرت */
 .card{
-  max-height:95vh;
-}
+  background:white;
+  width:95%;
+  max-width:450px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
+  text-align:center;
 }
 
-/* الصورة */
+/* الصورة داخل الموقع */
 .card img{
   width:100%;
   display:block;
@@ -64,11 +69,11 @@ body{
 
 /* الأزرار */
 button{
-  padding:20px 35px;
-  margin:10px;
+  padding:18px 30px;
+  margin:8px;
   border:none;
-  border-radius:15px;
-  font-size:28px;
+  border-radius:12px;
+  font-size:26px;
   cursor:pointer;
   background:#e0e0e0;
 }
