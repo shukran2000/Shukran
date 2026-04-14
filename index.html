@@ -34,7 +34,7 @@ body{
   background-repeat: no-repeat;
 }
 
-/* تغميق */
+/* تغميق خفيف */
 body::before{
   content:"";
   position:fixed;
@@ -42,16 +42,16 @@ body::before{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.35);
+  background:rgba(0,0,0,0.25);
 }
 
-/* الكرت */
+/* الكرت (خليته أوضح) */
 .card{
   width:92%;
   max-width:400px;
-  background: rgba(255,255,255,0.9);
+  background: white; /* مهم */
   border-radius:15px;
-  box-shadow:0 0 20px rgba(0,0,0,0.3);
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
   text-align:center;
   position:relative;
   z-index:1;
@@ -68,7 +68,7 @@ body::before{
 }
 
 .name{
-  color:#1e2a78; /* نيلي */
+  color:#1e2a78;
   margin:6px 0;
   font-size:16px;
   font-weight:bold;
@@ -76,4 +76,71 @@ body::before{
 
 .counter{
   font-size:55px;
- 
+  margin:10px 0;
+  font-weight:bold;
+}
+
+/* الأزرار */
+button{
+  padding:14px 20px;
+  margin:6px;
+  border:none;
+  border-radius:10px;
+  font-size:22px;
+  cursor:pointer;
+  background:#1e2a78;
+  color:white;
+}
+
+button:active{
+  transform:scale(0.95);
+}
+
+/* النص */
+.zikr{
+  margin-top:10px;
+  color:#1e2a78;
+  font-size:16px;
+  font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+  <div class="box">
+    <div class="title">صدقة جارية</div>
+
+    <div class="name">استغفار إلى روح المرحومة ام ازهر</div>
+
+    <div class="counter" id="count">0</div>
+
+    <button onclick="countUp()">+</button>
+    <button onclick="resetCount()">↺</button>
+
+    <div class="zikr">استغفر الله واتوب اليه</div>
+  </div>
+
+</div>
+
+<script>
+let count = 0;
+
+function countUp(){
+  if(count < 100){
+    count++;
+    document.getElementById("count").innerText = count;
+  }
+}
+
+function resetCount(){
+  count = 0;
+  document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
