@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>صدقة جارية</title>
+
+<style>
+body{
+  font-family: Arial;
+  background:#f2f2f2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+.card{
+  background:white;
+  width:300px;
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  text-align:center;
+}
+
+.card img{
+  width:100%;
+}
+
+.box{
+  padding:15px;
+}
+
+.title{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.name{
+  margin:5px 0;
+  color:gray;
+}
+
+.counter{
+  font-size:40px;
+  margin:10px 0;
+}
+
+button{
+  padding:10px 15px;
+  margin:5px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ddd;
+}
+
+.zikr{
+  margin-top:10px;
+  color:green;
+}
+a button{
+  background:#4CAF50;
+  color:white;
+}
+a{
+  text-decoration:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+<img src="https://i.imgur.com/tUfhLCN.jpeg">
+
+<div class="box">
+<div class="title">صدقة جارية</div>
+<div class="name">ميعاد ابراهيم رمضان</div>
+
+<div class="counter" id="count">0</div>
+
+<button onclick="countUp()">+</button>
+<button onclick="resetCount()">↺</button>
+
+<!-- رابط مستقل -->
+<a href="https://app.netlify.com/projects/shukranproject/deploys" target="_blank">
+  <button>Netlify Status</button>
+</a>
+
+<div class="zikr">استغفر الله</div>
+</div>
+</div>
+
+<script>
+let count = 0;
+
+function countUp(){
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function resetCount(){
+  count = 0;
+  document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
