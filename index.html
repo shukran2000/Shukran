@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>صدقة جارية</title>
+
+<!-- 🔥 Social preview (عند مشاركة الرابط) -->
+<meta property="og:title" content="صدقة جارية">
+<meta property="og:description" content="استغفار إلى روح المرحومة ميعاد ابراهيم">
+<meta property="og:image" content="https://i.imgur.com/tUfhLCN.jpeg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shukran2000.github.io/Shukran/">
 
 <style>
 *{
@@ -109,8 +117,10 @@ button:active{
 let count = 0;
 
 function countUp(){
-  count++;
-  document.getElementById("count").innerText = count;
+  if(count < 100){
+    count++;
+    document.getElementById("count").innerText = count;
+  }
 }
 
 function resetCount(){
