@@ -6,7 +6,6 @@
 <title>صدقة جارية</title>
 
 <meta property="og:title" content="استغفار إلى روح ام ازهر">
-<meta property="og:description" content="صدقة جارية">
 <meta property="og:image" content="https://i.imgur.com/a3Wv0QQ.jpeg">
 
 <style>
@@ -45,47 +44,54 @@ body::before{
   background:rgba(0,0,0,0.25);
 }
 
-/* الكرت (خليته أوضح) */
+/* البوكس الشفاف */
 .card{
   width:92%;
   max-width:400px;
-  background: white; /* مهم */
-  border-radius:15px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius:20px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.3);
   text-align:center;
   position:relative;
   z-index:1;
+  border:1px solid rgba(255,255,255,0.3);
 }
 
 /* المحتوى */
 .box{
-  padding:15px;
+  padding:18px;
 }
 
 .title{
-  font-size:20px;
+  font-size:22px;
   font-weight:bold;
+  color:#1e2a78;
 }
 
+/* النص الرئيسي */
 .name{
   color:#1e2a78;
-  margin:6px 0;
+  margin:8px 0;
   font-size:16px;
   font-weight:bold;
 }
 
+/* العداد */
 .counter{
-  font-size:55px;
+  font-size:60px;
   margin:10px 0;
   font-weight:bold;
+  color:#000;
 }
 
 /* الأزرار */
 button{
-  padding:14px 20px;
+  padding:14px 22px;
   margin:6px;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
   font-size:22px;
   cursor:pointer;
   background:#1e2a78;
@@ -96,11 +102,11 @@ button:active{
   transform:scale(0.95);
 }
 
-/* النص */
+/* الذكر */
 .zikr{
   margin-top:10px;
   color:#1e2a78;
-  font-size:16px;
+  font-size:17px;
   font-weight:bold;
 }
 </style>
@@ -114,7 +120,9 @@ button:active{
   <div class="box">
     <div class="title">صدقة جارية</div>
 
-    <div class="name">استغفار إلى روح المرحومة ام ازهر</div>
+    <div class="name">
+      استغفار إلى روح المرحومة ام ازهر
+    </div>
 
     <div class="counter" id="count">0</div>
 
