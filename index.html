@@ -41,25 +41,27 @@ body::before{
   left:0;
   width:100%;
   height:100%;
-  background:rgba(0,0,0,0.22);
+  background:rgba(0,0,0,0.25);
 }
 
-/* البوكس الأبيض الشفاف (أوضح شوي) */
+/* البوكس الزجاجي */
 .card{
   width:92%;
   max-width:400px;
-  background: rgba(255,255,255,0.88); /* أبيض أوضح */
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-radius:20px;
-  box-shadow:0 8px 30px rgba(0,0,0,0.22);
+  box-shadow:0 10px 35px rgba(0,0,0,0.25);
   text-align:center;
   position:relative;
   z-index:1;
-  border:1px solid rgba(255,255,255,0.9);
+  border:1px solid rgba(255,255,255,0.5);
 }
 
 /* المحتوى */
 .box{
-  padding:18px;
+  padding:20px;
 }
 
 .title{
