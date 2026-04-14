@@ -3,15 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>صدقة جارية</title>
-
-<!-- 🔥 Social preview (عند مشاركة الرابط) -->
-<meta property="og:title" content="صدقة جارية">
-<meta property="og:description" content="استغفار إلى روح المرحومة ميعاد ابراهيم">
-<meta property="og:image" content="https:https://i.imgur.com/a3Wv0QQ.jpeg">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://shukran2000.github.io/Shukran/">
 
 <style>
 *{
@@ -22,59 +14,73 @@
 
 body{
   font-family: Arial;
-  background:#f2f2f2;
-  min-height:100vh;
+  height:100dvh;
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow:hidden;
+  position:relative;
+
+  /* الخلفية */
+  background-image: url('https://i.imgur.com/a3Wv0QQ.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* تغميق خفيف */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+  z-index:0;
 }
 
 /* الكرت */
 .card{
-  background:white;
-  width:95%;
-  max-width:450px;
+  width:92%;
+  max-width:400px;
+  background: rgba(255,255,255,0.9);
   border-radius:15px;
-  overflow:hidden;
-  box-shadow:0 0 20px rgba(0,0,0,0.25);
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
   text-align:center;
-}
-
-/* الصورة */
-.card img{
-  width:100%;
-  display:block;
+  position:relative;
+  z-index:1;
 }
 
 /* المحتوى */
 .box{
-  padding:20px;
+  padding:15px;
 }
 
 .title{
-  font-size:24px;
+  font-size:20px;
   font-weight:bold;
 }
 
 .name{
   color:gray;
-  margin:10px 0;
-  font-size:18px;
+  margin:6px 0;
+  font-size:15px;
 }
 
 .counter{
-  font-size:70px;
-  margin:20px 0;
+  font-size:55px;
+  margin:10px 0;
   font-weight:bold;
 }
 
 /* الأزرار */
 button{
-  padding:20px 35px;
-  margin:10px;
+  padding:14px 20px;
+  margin:6px;
   border:none;
-  border-radius:15px;
-  font-size:28px;
+  border-radius:10px;
+  font-size:22px;
   cursor:pointer;
   background:#e0e0e0;
 }
@@ -84,9 +90,9 @@ button:active{
 }
 
 .zikr{
-  margin-top:15px;
+  margin-top:10px;
   color:green;
-  font-size:18px;
+  font-size:16px;
 }
 </style>
 
@@ -95,8 +101,6 @@ button:active{
 <body>
 
 <div class="card">
-
-  <img src="https://i.imgur.com/tUfhLCN.jpeg">
 
   <div class="box">
     <div class="title">صدقة جارية</div>
