@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>صدقة جارية</title>
+
 <style>
 *{
   margin:0;
@@ -17,18 +24,17 @@ body{
 /* الكرت */
 .card{
   background:white;
-  width:92%;
-  max-width:420px;
+  width:95%;
+  max-width:450px;
   border-radius:15px;
   overflow:hidden;
-  box-shadow:0 0 15px rgba(0,0,0,0.2);
+  box-shadow:0 0 20px rgba(0,0,0,0.25);
   text-align:center;
 }
 
 /* الصورة */
 .card img{
   width:100%;
-  height:auto;
   display:block;
 }
 
@@ -38,22 +44,23 @@ body{
 }
 
 .title{
-  font-size:22px;
+  font-size:24px;
   font-weight:bold;
 }
 
 .name{
   color:gray;
-  margin:5px 0;
+  margin:8px 0;
+  font-size:18px;
 }
 
 .counter{
-  font-size:60px;
-  margin:10px 0;
+  font-size:65px;
+  margin:15px 0;
 }
 
 button{
-  padding:12px 16px;
+  padding:12px 18px;
   margin:5px;
   border:none;
   border-radius:10px;
@@ -61,8 +68,52 @@ button{
   cursor:pointer;
 }
 
+button:hover{
+  background:#ddd;
+}
+
 .zikr{
-  margin-top:10px;
+  margin-top:15px;
   color:green;
+  font-size:18px;
 }
 </style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+  <img src="https://i.imgur.com/tUfhLCN.jpeg">
+
+  <div class="box">
+    <div class="title">صدقة جارية</div>
+    <div class="name">ميعاد ابراهيم رمضان</div>
+
+    <div class="counter" id="count">0</div>
+
+    <button onclick="countUp()">+</button>
+    <button onclick="resetCount()">↺</button>
+
+    <div class="zikr">استغفر الله</div>
+  </div>
+
+</div>
+
+<script>
+let count = 0;
+
+function countUp(){
+  count++;
+  document.getElementById("count").innerText = count;
+}
+
+function resetCount(){
+  count = 0;
+  document.getElementById("count").innerText = count;
+}
+</script>
+
+</body>
+</html>
